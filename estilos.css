@@ -1,0 +1,312 @@
+@charset "utf-8";
+/* CSS Document */
+* { 
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-moz-box-sizing: border-box;
+}
+body {
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size:16px; 
+color:black;
+}
+nav, header, main, section, article, aside, footer {
+padding:0;
+margin:0;
+/*overflow: hidden;*/
+display: block;
+}
+.contenedor{
+             max-width: 1200px;
+             margin:0 auto;
+             display: flex;
+             flex-direction: column;
+           }
+/*--------------------------------------------------------*/
+
+.contenedorNav{
+                display: flex;
+                flex-wrap: nowrap;  
+                align-items: center; 
+                flex-direction: row;
+                justify-content:space-between;            
+            }
+
+.categorias{
+            display: inline-block;
+            position: relative; 
+           }
+.categorias:hover .dropdown{
+                            display: block;
+                            }
+.dropdown{
+          z-index:1;
+          width: 185px;
+          display: none;
+          flex-direction: column;
+          position: absolute;
+        }
+.dropdown a{
+             display: block;
+             padding: 16px;
+             background-color: rgba(255, 255, 255, 0.698);
+             text-decoration: none;
+             color: black;
+           }
+.dropdown a:hover{
+                color: darkred;
+                text-decoration: underline;
+               }
+.fotoB{
+       border-bottom-right-radius: 40px;
+       border-bottom-left-radius: 40px;
+      }
+
+.boton{
+        background-color: black;
+        color: white;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        font-weight: lighter;
+        padding: 25px 15px; 
+     }
+.boton:hover{
+              background-color: white;
+              color: darkred;
+              border: 1px solid rgba(0, 0, 0, 0.267);
+              cursor: pointer;
+             }
+.boton>span{
+            font-weight: bold;
+           }
+
+
+.lista>ul{  
+            list-style-type: none;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin: 0;
+            padding: 0;
+            display: flex;          
+         }
+.lista ul li{
+             padding: 0px 10px 0px 0px;
+            }
+.lista ul li a{
+                text-decoration: none;
+                color: black;
+              }
+.lista ul li a:hover{
+                 text-decoration: underline;
+                 color: darkred;
+                    } 
+.logo{
+     width: 250px;
+     } 
+
+.logo img{
+    width: 100%;
+    height: auto;   
+    }  
+/*-----------------------------------------------------------*/
+
+.publicidad{
+             background-image: url(../img/banner-iPhone-11.jpg);
+             height:300px;
+             background-position: center; 
+             background-repeat: no-repeat; 
+             margin-bottom: 5px;
+            }
+
+.contenedorPrincipal{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap ;                 
+                    }
+.contenedorPrincipal img{
+                         width: 100%;
+                         height: auto;
+                        }
+.contenedorProd{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                /*align-items: center;
+                justify-content: center;*/
+                }
+.productos{
+           margin: 3px 3px 0 3px;
+           width: 234px;
+           /*border: 3px solid white;
+           height: auto;*/        
+          }
+
+/*---------------------------------------------------------*/
+
+.contenedorOferta{
+                   display: flex;
+                   flex-direction: row;
+                   flex-wrap: wrap;
+                   justify-content: flex-start; 
+                 }
+.oferta40{
+          width: 40%;
+          padding-bottom: 5px;
+         }
+.oferta60{
+          width: 60%;
+          padding-bottom: 5px;
+         }
+.banner{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+       }
+.banner img{
+            padding-bottom: 3px;  
+           }
+/*-----------------------------------------------------------*/
+
+.footer{
+         display: flex;
+         flex-direction: row;
+         flex-wrap: nowrap;
+         justify-content: space-between;
+         align-items: center;
+         margin: auto;
+        
+        }
+.footer img{
+            filter: grayscale();
+           }
+.footer img:hover{
+              filter: none;
+              cursor: pointer;
+             }
+/*------------------------------------------------------------*/
+
+.politica{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+         }
+
+.hijosPolitica ul{
+                   list-style-type: none;
+                   margin: 0;
+                   padding: 0;
+                   display: flex;
+                   flex-direction: row;
+                   flex-wrap: nowrap;
+                 }
+.hijosPolitica ul li a{
+                      text-decoration: none;
+                      margin-right: 15px;
+                      color: black;
+                      }
+.hijosPolitica ul li a:hover{
+                             color: darkred;
+                             text-decoration: underline;
+                            }
+.logo2{
+       width: 300px;
+       padding: 15px;
+      }
+.logo2 img{
+    width: 100%;
+    height:auto;
+}
+/*------------------------------------------------------------*/
+
+.icons{
+       display: none;
+      }
+.icons img{
+          width: 25px;
+          margin-right: 10px;
+          }
+/*-----------------------------------------------------------*/
+
+/*--------CONSULTAS DE MEDIOS------------------*/
+
+
+@media screen and (max-width:1066px) {
+.lista{display: none;}  
+.icons{display: block;}
+}
+@media screen and (max-width:1080px){
+  /*.hijosPolitica ul{flex-direction: column; width: 200px;}
+  .logo2{width: 400px;height: auto;}/* ESTA ES LA VERSION DE PACO*/
+  .hijosPolitica ul{flex-wrap: wrap;display: block;}
+  .hijosPolitica ul li{padding: 3px 0; white-space: nowrap;} 
+}
+@media screen and (max-width:600px) {
+  .categorias{white-space: nowrap;}
+  .icons{display: flex;}
+  .icons img{margin-right:0px; margin-left:5px;}
+  .logo{max-width: 250px;}
+  .footer{justify-content: center;flex-wrap: wrap;}
+} 
+@media screen and (max-width: 800px) {
+  .oferta40{width: 100%;}
+  .oferta60{ width: 100%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1500px) {
+  .productos{width: 19.4%;}
+}
+@media screen and (max-width:1200px) {
+  .productos{width: 19.4%;}
+}
+@media screen and (max-width:1080px) {
+  .productos{width: 24.3%;}
+}
+@media screen and (max-width:900px) {
+  .productos{width: 32.4%;}
+}
+@media screen and (max-width:700px) {
+  .productos{width: 48.6%;}
+}
+@media screen and (max-width:500px) {
+  .productos{width: 48.6%;}/*100%*/
+}
+
+/* para usar min-width tendría que ordenarlos al revés  
+@media screen and (min-width:500px) {
+  .productos{width: 48.6%;}
+}
+@media screen and (max-width:700px) {
+  .productos{width: 32.4%;}
+}
+@media screen and (max-width:900px) {
+  .productos{width: 24.3%;}
+}
+@media screen and (max-width:1080px) {
+  .productos{width: 19.4%;}
+}
+@media screen and (max-width:1200px) {
+  .productos{width: 19.5%;}
+}*/
+  
+
+
+
+
+
